@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <title>Random Laura Dern | HOME</title>
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
+    <meta charset="utf-8">
+<style type="text/css">
+    @font-face {
+        font-family: "gotcha";
+        src: url("/fonts/gotcharegular-webfont.woff2") format("woff2"),
+	     url("/fonts/gotcharegular-webfont.woff")  format("woff"),
+	     url("/fonts/gotcharegular.otf")           format("opentype");
+    }
+</style>
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="clearfix">
+
+    <!--- BEGIN header and navigation -->
+
+    <header class="clearfix">
+        <div class="headerContent">
+            <p class="logo"><a href="index.html">Randomlauradern.com</a></p>
+            <div class="hidden"><a href="#accessibilityMainContent">Skip to main content</a></div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h1>
+                <span class="random">Random</span>
+                <span class="ld">Laura Dern</span>
+                <span class="photos">Photos</span>
+            </h1>
+        </div>
+    </div>
+
+    <div class="content clearfix flex">
+
+        <div class="how-it-works-left" id="#accessibilityMainContent">
+            <h2>How it Works</h2>
+            <ol>
+                <li>Hit “generate photo” button below.</li>
+                <li>A new Laura Dern photo will be generated.</li>
+                <li>Copy Random Laura Dern photo URL.</li>
+                <li>Win.</li>
+            </ol>
+            <button id="js-url-generate" onclick="regenerate()">Generate Photo</button>
+        </div>
+
+        <div class="how-it-works-right">
+            <div class="generator">
+                <p>Random Laura Dern Photo Generator</p>
+                <div class="generator-image">
+                    <img id="js-image" src="/random" alt="This is an image of Laura Dern that changes whenever the generate button is pressed" />
+                </div>
+                <div class="url">
+		    <p><label name="url-container">Random Laura Dern Photo URL</label></p>
+                    <div class="generator-form">
+                        <input disabled="disabled"type="text" name="url-constainer" id="js-url" value="http://randomlauradern.com/random">
+                        <button id="js-url-copy" onclick="copyToClipboard();">copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content content-image clearfix">
+        <div class="how-it-works">
+            <h2>About Laura Dern</h2>
+            <p>Laura Dern is an award-winning actress known for her roles in such films as Jurassic Park & Star Wars. She’s also a well-known feminist working hard to level the playing field for minorities in many industries — including tech.</p>
+            <p>She recently participated in a Young Women Code event sponsored by Booking.com. To celebrate her participation, two of the code mentors made this Random Photo Generator for the code students to add placeholder images to their sites.</p>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>This site was created with smiles & high-fives by Hadeer Younis & Erin Weigel.</p>
+    </footer>
+    <script type="text/javascript">
+        var img = document.getElementById('js-image');
+        var urlToCopy = document.getElementById("js-url");
+
+        function copyToClipboard() {
+            urlToCopy.select();
+            document.execCommand("copy");
+        }
+
+        function regenerate() {
+            var request = new XMLHttpRequest();
+
+            request.onreadystatechange = function() {
+                if (request.readyState == XMLHttpRequest.DONE) {
+                    if (request.status == 200) {
+                        var url = JSON.parse(request.response).url;
+                        img.src = url;
+                        urlToCopy.value = window.location.origin + url;
+                    }
+                }
+            };
+
+            request.open("GET", "/api/random.jpg", true);
+            request.send();
+        }
+        regenerate();
+    </script>
+</body>
+
+</html>

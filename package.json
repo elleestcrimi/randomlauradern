@@ -1,0 +1,21 @@
+{
+    "name": "randomlauradern",
+    "version": "1.0.0",
+    "description": "A random Laura Dern photo generator",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "engines": {
+        "node": "10.x"
+    },
+    "dependencies": {
+        "cors": "^2.8.1",
+        "compression": "1.6.2",
+        "express": "^4.14.0",
+        "npm": "^6.9.0",
+        "request": "^2.79.0",
+        "request-promise": "^4.1.1"
+    },
+    "license": "GNU"
+}

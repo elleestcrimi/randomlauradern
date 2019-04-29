@@ -1,0 +1,286 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+body {
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+	position: fixed;
+	z-index: 1;
+	padding: 0 20px;
+}
+
+.hero {
+  background-image: url('/img/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top; 
+  margin: 0;
+  min-height: 600px;
+}
+
+h1 {
+	position: relative;
+	margin-left: 15%;
+}
+
+h2 {
+	font-size: 24px;
+	letter-spacing: 1px;
+	margin: 20px 0;
+	overflow: hidden;
+}
+
+ol {
+	line-height: 2em;
+}
+
+
+.hero-text {
+	color: #fff;
+	padding-top: 200px;
+	text-shadow: -2px -2px 15px rgba(0, 0, 0, .60);
+}
+
+span.ld {
+	font-family: 'gotcha', sans-serif;
+	font-size: 120px;
+	font-weight: normal;
+	clear: both;
+	display: block;
+	position: absolute;
+}
+
+span.random {
+	font-size: 22px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	position: absolute;
+	top: 22px;
+	left: 88px;
+}
+
+span.photos {
+	font-size: 22px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	position: absolute;
+	top: 135px;
+	left: 275px;
+}
+
+.content {
+	min-height: 600px;
+	padding: 40px;
+	position: relative;
+}
+
+.how-it-works-left {
+	float: left;
+	width: 400px;
+	display: block;
+	margin: 0 0 100px 0;
+}
+
+.how-it-works p,
+.how-it-works-right p {
+	margin-bottom: 20px;
+	line-height: 1.5em;
+}
+
+.generator p {
+	margin: 0;
+}
+
+.how-it-works-right {
+	float: left;
+	width: 500px;
+	display: block;
+	min-height: 300px;
+}
+
+.how-it-works {
+	margin-left: 400px;
+	min-height: 300px;
+}
+
+.generator {
+	border: 1px solid #000;
+	height: 470px;
+}
+
+.generator p {
+	background: #000;
+	color: #fff;
+	padding: 10px;
+}
+
+.generator-form {
+    display: flex;
+    align-items: flex-end;
+    height: 48px;
+}
+
+.generator-image {
+   text-align: center;
+   overflow: hidden;
+   background: black;
+}
+
+.generator-image img {
+    height: 332px;
+    margin: 0 -100px;
+}
+
+input[type="text"] {
+    border: 0;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 16px;
+    height: 48px;
+    font-family: monospace;
+    color: #454545;
+}
+	
+.url {
+	background: #000;
+	min-height: 20px;
+	margin-top: -3px;
+}
+
+.content-image {
+  	background-image: url('/img/content.jpg');
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-position: left top; 
+  	margin: 0;
+  	padding: 80px 80px 0 80px;
+  	height: 500px;
+  	min-height: unset;
+}
+
+.how-it-works-left h2 {
+	margin-top: 80px;
+}
+
+.flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+} 
+
+button {
+	background: #DA2210;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-top: 40px;
+	padding: 15px 50px;
+	border: none;
+}
+
+button:hover {
+	background: #B61D0E;
+}
+
+footer {
+	background-color: #000;
+	color: #fff;
+	height: 200px;
+	padding: 40px;
+}
+
+.logo a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.logo {
+  margin: 10px 30px 0 10px;
+  font-size: 18px;
+  display: inline-block;
+  max-width: 300px;
+  float: left;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+header {
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  min-height: 40px;
+  z-index: 2;
+}
+
+/*---  BEGIN ACCESSIBILITY FOR SCREENREADERS ---*/
+
+.hidden {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/*---  END ACCESSIBILITY FOR SCREENREADERS ---*/
+
+/*---  SMARTPHONES PORTRAIT ---*/
+
+@media only screen and (min-width: 320px) and (max-width: 991px) { 
+	button {
+		width: 100%;
+	}
+
+    .how-it-works-left button,
+    .how-it-works-left h2 {
+		text-align: center;
+	}
+
+	.content-image {
+		background: #f5eaee;
+	}	
+
+	.how-it-works {
+		margin-left: 0px;
+	}
+}
+
+.generator-form button {
+	width: 25%;
+	text-align: center;
+	padding: 15px 0;
+}
